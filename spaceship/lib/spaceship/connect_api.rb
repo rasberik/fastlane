@@ -88,6 +88,7 @@ module Spaceship
       TV_OS = "TV_OS"
       VISION_OS = "VISION_OS"
       WATCH_OS = "WATCH_OS"
+      VISION_OS = "VISION_OS"
 
       ALL = [IOS, MAC_OS, TV_OS, VISION_OS, WATCH_OS]
 
@@ -102,7 +103,7 @@ module Spaceship
           return Spaceship::ConnectAPI::Platform::MAC_OS
         when :ios
           return Spaceship::ConnectAPI::Platform::IOS
-        when :xros, :visionos
+        when :visionos, :xros
           return Spaceship::ConnectAPI::Platform::VISION_OS
         else
           raise "Cannot find a matching platform for '#{platform}' - valid values are #{ALL.join(', ')}"
