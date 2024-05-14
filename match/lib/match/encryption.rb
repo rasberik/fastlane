@@ -1,6 +1,5 @@
 require_relative 'encryption/interface'
 require_relative 'encryption/openssl'
-require_relative 'encryption/encryption'
 
 module Match
   module Encryption
